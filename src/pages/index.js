@@ -11,7 +11,7 @@ export default function Home() {
       </Head>
       <main className={`text-8xl`}>
         <h1>
-          Hello World
+          Main Page
         </h1>
       </main>
     </>
