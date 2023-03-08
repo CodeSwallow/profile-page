@@ -10,7 +10,7 @@ export default function Navbar({toggleDarkMode}) {
                         Code<span className="text-gray-900 dark:text-white">Swallow </span>
                         <span
                             className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
-                            Blog
+                            Profile
                         </span>
                     </span>
                     <ul className="flex p-4 space-x-4">
@@ -18,7 +18,10 @@ export default function Navbar({toggleDarkMode}) {
                             <Link href="/">Home</Link>
                         </li>
                         <li>
-                            <Link href="/">Popular</Link>
+                            <Link href="/">About</Link>
+                        </li>
+                        <li>
+                            <Link href="/">Projects</Link>
                         </li>
                     </ul>
                 </div>
