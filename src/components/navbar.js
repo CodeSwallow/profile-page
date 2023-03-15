@@ -7,7 +7,7 @@ export default function Navbar({toggleDarkMode}) {
             <div className="container mt-2.5 flex items-center justify-between mx-auto px-4 md:px-24 lg:px-44">
                 <Logo className={`h-16 w-16 fill-black dark:fill-white`}/>
                 <div className={`flex items-center dark:text-white`}>
-                    <ul className="flex p-4 space-x-4">
+                    <ul className="flex pl-4 py-4 space-x-4">
                         <li>
                             <Link href="/">Home</Link>
                         </li>
