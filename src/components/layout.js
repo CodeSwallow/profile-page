@@ -26,7 +26,7 @@ export default function Layout({children}) {
             <div className="bg-zinc-100 dark:bg-gray-900 min-h-screen min-w-screen">
                 <Head>
                     <meta charSet={"utf-8"}/>
-                    <meta name="description" content="CodeSwallow"/>
+                    <meta name="description" content="Isai Ramirez"/>
                     <meta name="viewport" content="width=device-width, initial-scale=1"/>
                     <link rel="icon" href="/favicon.ico"/>
                 </Head>

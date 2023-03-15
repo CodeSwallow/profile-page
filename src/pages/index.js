@@ -13,8 +13,8 @@ export default function Home() {
             </Head>
             <main>
                 <section>
-                    <div className="font-serif py-8 px-4 mx-auto max-w-screen-xl text-start lg:py-16 lg:px-16">
-                        <h1 className="mb-8 mt-8 sm:mt-12 lg:mt-24 text-4xl font-bold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+                    <div className="font-serif py-8 px-8 mx-auto max-w-screen-xl text-start md:px-20 lg:py-16 lg:px-24">
+                        <h1 className="mb-8 mt-8 sm:mt-12 lg:mt-20 text-4xl font-bold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
                             {`Hello, I'm Isai Ramirez`}
                         </h1>
                         <div className="lg:mr-32 text-justify">
