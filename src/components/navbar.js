@@ -5,7 +5,7 @@ export default function Navbar({toggleDarkMode}) {
     return (
         <nav className="py-2.5">
             <div className="container flex items-center justify-between mx-auto px-24">
-                <Logo className={`h-12 w-12 fill-white`}/>
+                <Logo className={`h-12 w-12 fill-black dark:fill-white`}/>
                 <div className={`flex items-center dark:text-white`}>
                     <ul className="flex p-4 space-x-4">
                         <li>
