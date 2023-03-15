@@ -12,10 +12,10 @@ export default function Navbar({toggleDarkMode}) {
                             <Link href="/">Home</Link>
                         </li>
                         <li>
-                            <Link href="/">About</Link>
+                            <Link href="/about">About</Link>
                         </li>
                         <li>
-                            <Link href="/">Projects</Link>
+                            <Link href="/projects">Projects</Link>
                         </li>
                         <li>
                             <label className="relative inline-flex items-center cursor-pointer">
