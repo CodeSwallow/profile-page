@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Layout from "../components/layout";
+import Link from "next/link";
 
 export default function Home() {
     return (
@@ -13,15 +14,21 @@ export default function Home() {
             <main>
                 <section>
                     <div className="font-serif py-8 px-4 mx-auto max-w-screen-xl text-start lg:py-16 lg:px-16">
-                        <h1 className="mb-8 text-4xl font-bold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
-                            {`Hello, my name is Isai Ramirez`}
+                        <h1 className="mb-8 mt-8 sm:mt-12 lg:mt-24 text-4xl font-bold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+                            {`Hello, I'm Isai Ramirez`}
                         </h1>
-                        <p className="mb-4 text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">
-                            {`I'm a computer science student with special interest in web development and cloud technologies (AWS).`}
-                        </p>
-                        <p className="mb-8 text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">
-                            {`I'm always looking for opportunities to expand my knowledge and skillset. Whether it's learning a new programming language or exploring the latest advancements in cloud computing, I'm always eager to learn and grow as a developer.`}
-                        </p>
+                        <div className="lg:mr-32 text-justify">
+                            <p className="mb-4 text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-300">
+                                {`I'm a computer science student with special interest in web development and cloud technologies (AWS).`}
+                            </p>
+                            <p className="mb-12 text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-300">
+                                {`I'm always looking for opportunities to expand my knowledge and skill-set. Whether it's learning a new programming language or exploring the latest advancements in cloud computing, I'm always eager to learn and grow as a developer.`}
+                            </p>
+                        </div>
+                        <Link href={"/projects"} className="text-xl dark:text-white hover:font-semibold">
+                            <span className="underline underline-offset-4">Projects</span>
+                            {` ->`}
+                        </Link>
                     </div>
                 </section>
             </main>
