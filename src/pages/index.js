@@ -3,6 +3,12 @@ import Layout from "../components/layout";
 import Link from "next/link";
 
 export default function Home() {
+    let bodyText = {
+        "title": "Hello, I'm Isai Ramirez",
+        "underTitle": "I'm a computer science student with special interest in web development and cloud technologies (AWS).",
+        "body": "I'm always looking for opportunities to expand my knowledge and skill-set. Whether it's learning a new programming language or exploring the latest advancements in cloud computing, I'm always eager to learn and grow as a developer."
+    }
+
     return (
         <Layout>
             <Head>
@@ -12,16 +18,16 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
             <section>
-                <div className="font-serif py-8 px-8 mx-auto text-start md:px-20 lg:py-12 lg:px-44">
-                    <h1 className="border-t-2 border-black dark:border-white pt-12 mb-8 mt-4 sm:mt-8 lg:mt-12 text-4xl font-bold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
-                        {`Hello, I'm Isai Ramirez`}
+                <div className="font-serif px-8 mx-auto text-start">
+                    <h1 className="border-t-2 border-black dark:border-white pt-12 mb-8 mt-4 sm:mt-8 text-4xl font-bold tracking-tight leading-none text-gray-900 dark:text-white">
+                        {bodyText.title}
                     </h1>
-                    <div className="lg:mr-44 text-justify">
-                        <p className="mb-4 text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-300">
-                            {`I'm a computer science student with special interest in web development and cloud technologies (AWS).`}
+                    <div className="text-justify">
+                        <p className="mb-4 font-normal text-gray-500 text-lg dark:text-gray-300">
+                            {bodyText.underTitle}
                         </p>
-                        <p className="mb-12 text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-300">
-                            {`I'm always looking for opportunities to expand my knowledge and skill-set. Whether it's learning a new programming language or exploring the latest advancements in cloud computing, I'm always eager to learn and grow as a developer.`}
+                        <p className="mb-12 text-lg font-normal text-gray-500 dark:text-gray-300">
+                            {bodyText.body}
                         </p>
                     </div>
                     <Link href={"/projects"} className="text-xl dark:text-white hover:font-semibold">
