@@ -30,11 +30,11 @@ export default function Layout({children}) {
                     <meta name="viewport" content="width=device-width, initial-scale=1"/>
                     <link rel="icon" href="/favicon.ico"/>
                 </Head>
-                <div className="flex pt-24 mx-64">
+                <div className="flex pt-32 mx-64">
                     <div className="ml-8 mr-4">
                         <Navbar toggleDarkMode={toggleDarkMode}/>
                     </div>
-                    <div className="mr-4">
+                    <div className="mr-4 w-full">
                         <main>
                             {children}
                         </main>

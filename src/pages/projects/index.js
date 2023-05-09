@@ -12,8 +12,8 @@ export default function Projects() {
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
             <section>
-                <div className="font-serif py-8 px-8 mx-auto text-start md:px-20 lg:py-12 lg:px-44">
-                    <h1 className="border-t-2 border-black dark:border-white pt-12 mb-8 mt-4 sm:mt-8 lg:mt-12 text-4xl font-bold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+                <div className="px-8 mx-auto text-start">
+                    <h1 className="border-t-2 border-black dark:border-white pt-12 mb-8 mt-4 sm:mt-8 text-4xl font-bold tracking-tight leading-none text-gray-900 dark:text-white">
                         Projects
                     </h1>
                     <ul className="flex flex-col py-4 space-y-4 text-black dark:text-white">
