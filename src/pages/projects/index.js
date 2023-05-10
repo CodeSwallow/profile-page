@@ -7,17 +7,23 @@ export default function Projects() {
         {
             title: 'Some Interesting Project',
             description: 'This is a description for the interesting project',
-            slug: '/project-placeholder-1'
+            slug: '/project-placeholder-1',
+            dateStarted: '2021-01-01',
+            technologies: ['React', 'Next.js', 'Tailwind CSS']
         },
         {
             title: 'Another Project',
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique quis Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique quis Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique quis',
-            slug: '/project-placeholder-2'
+            slug: '/project-placeholder-2',
+            dateStarted: '2021-01-01',
+            technologies: ['AWS Lambda', 'Python']
         },
         {
             title: 'Project Title',
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique quis tempus',
-            slug: '/project-placeholder-3'
+            slug: '/project-placeholder-3',
+            dateStarted: '2021-01-01',
+            technologies: ['Python', 'Django', 'ElasticBeanstalk', 'Tailwind CSS']
         }
     ]
 
