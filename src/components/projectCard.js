@@ -1,4 +1,5 @@
 import Link from "next/link";
+import TechnologyCard from "@/components/technologyCard";
 
 
 export default function ProjectCard({project}) {
@@ -6,9 +7,13 @@ export default function ProjectCard({project}) {
         <div className="flex flex-col justify-between p-4 border bg-zinc-50 rounded-lg shadow dark:bg-gray-800">
             <div className="text-black dark:text-white flex justify-between">
                 <span className="text-sm font-light">
-                    {`Date or something`}
+                    {project.dateStarted}
                 </span>
-                <p>categories or something</p>
+                <div className="flex space-x-1">
+                    {project.technologies.map((technology, index) => (
+                        <TechnologyCard key={index} technology={technology}/>
+                    ))}
+                </div>
             </div>
             <div>
                 <h2 className="text-lg font-medium text-gray-700 dark:text-white hover:text-gray-600 dark:hover:text-gray-200">
