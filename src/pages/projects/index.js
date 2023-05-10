@@ -4,6 +4,24 @@ import Layout from "../../components/layout";
 import ProjectCard from "@/components/projectCard";
 
 export default function Projects() {
+    let placeHolderProjects = [
+        {
+            title: 'Some Interesting Project',
+            description: 'This is a description for the interesting project',
+            slug: '/project-placeholder-1'
+        },
+        {
+            title: 'Another Project',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique quis Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique quis Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique quis',
+            slug: '/project-placeholder-2'
+        },
+        {
+            title: 'Project Title',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique quis tempus',
+            slug: '/project-placeholder-3'
+        }
+    ]
+
     return (
         <Layout>
             <Head>
@@ -20,18 +38,11 @@ export default function Projects() {
                     <p className="text-gray-900 dark:text-white mb-8">
                         {`Here are some of the projects I've worked on:`}
                     </p>
-                    <ProjectCard title={'Project Title'} description={"Project Placeholder 1"} slug={"/project-placeholder-1"}/>
-                    <ul className="flex flex-col py-4 space-y-4 text-black dark:text-white">
-                        <li>
-                            <Link href={`/projects/project-placeholder-1`}>Project Placeholder 1</Link>
-                        </li>
-                        <li>
-                            <Link href={`/projects/project-placeholder-2`}>Project Placeholder 2</Link>
-                        </li>
-                        <li>
-                            <Link href={`/projects/project-placeholder-3`}>Project Placeholder 3</Link>
-                        </li>
-                    </ul>
+                    <div className="space-y-4">
+                        {placeHolderProjects.map((project, index) => (
+                            <ProjectCard key={index} project={project}/>
+                        ))}
+                    </div>
                 </div>
             </section>
         </Layout>
