@@ -23,10 +23,10 @@ describe('Home', () => {
         expect(homeLink).toBeInTheDocument();
     })
 
-    it('renders About link in navbar', () => {
+    it('renders Contact link in navbar', () => {
         render(<Home />);
 
-        const aboutLink = screen.getByRole('link', { name: /About/i});
+        const aboutLink = screen.getByRole('link', { name: /Contact/i});
 
         expect(aboutLink).toBeInTheDocument();
     })

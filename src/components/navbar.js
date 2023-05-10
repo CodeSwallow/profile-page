@@ -12,7 +12,7 @@ export default function Navbar({toggleDarkMode}) {
                             <Link href="/">Home</Link>
                         </li>
                         <li>
-                            <Link href="/about">About</Link>
+                            <Link href="/contact">Contact</Link>
                         </li>
                         <li>
                             <Link href="/projects">Projects</Link>
