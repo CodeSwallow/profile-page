@@ -8,7 +8,7 @@ export default function ContactCard({contact}) {
     }
 
     return (
-        <div className="flex-1 p-4 py-8 border bg-zinc-50 rounded-lg shadow dark:bg-gray-800">
+        <div className="w-full sm:w-48 mb-8 p-4 py-8 border bg-zinc-50 rounded-lg shadow dark:bg-gray-800">
             <a href={contact.url}>
                 <div className="text-black dark:text-white flex flex-col justify-center items-center">
                     <div>

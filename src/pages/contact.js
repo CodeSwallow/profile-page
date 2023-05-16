@@ -16,10 +16,10 @@ export default function Contact({contacts}) {
             </Head>
             <section>
                 <div className="px-8 mx-auto text-start">
-                    <h1 className="border-t-2 border-black dark:border-white pt-12 mb-8 mt-4 sm:mt-8 text-4xl font-bold tracking-tight leading-none text-gray-900 dark:text-white">
+                    <h1 className="border-t-2 border-black dark:border-white pt-12 mb-8 mt-4 sm:mt-8 text-4xl font-bold text-gray-900 dark:text-white">
                         Contact
                     </h1>
-                    <div className="flex justify-between space-x-4">
+                    <div className="flex justify-between flex-wrap">
                         {contacts.map((contact, index) => (
                             <ContactCard key={index} contact={contact}/>
                         ))}
