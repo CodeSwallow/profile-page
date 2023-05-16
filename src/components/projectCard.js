@@ -26,7 +26,7 @@ export default function ProjectCard({project}) {
             <div className="flex justify-between mt-4">
                 <Link
                     className="text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-200"
-                    href={`/projects/${project.project_id}`}>
+                    href={`/projects/${project.sk}`}>
                         Read more
                 </Link>
             </div>
