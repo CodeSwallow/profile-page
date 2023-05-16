@@ -1,31 +1,10 @@
-import Head from 'next/head'
+import Head from 'next/head';
 import Layout from "@/components/layout";
 import ProjectCard from "@/components/projectCard";
 
-export default function Projects() {
-    let placeHolderProjects = [
-        {
-            title: 'Some Interesting Project',
-            description: 'This is a description for the interesting project',
-            slug: '/project-placeholder-1',
-            dateStarted: '2021-01-01',
-            technologies: ['React', 'Next.js', 'Tailwind CSS']
-        },
-        {
-            title: 'Another Project',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique quis Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique quis Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique quis',
-            slug: '/project-placeholder-2',
-            dateStarted: '2021-01-01',
-            technologies: ['AWS Lambda', 'Python']
-        },
-        {
-            title: 'Project Title',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique quis tempus',
-            slug: '/project-placeholder-3',
-            dateStarted: '2021-01-01',
-            technologies: ['Python', 'Django', 'ElasticBeanstalk', 'Tailwind CSS']
-        }
-    ]
+export default function Projects({projects}) {
+    console.log("OMG")
+    console.log(projects)
 
     return (
         <Layout>
@@ -36,7 +15,7 @@ export default function Projects() {
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
             <section>
-                <div className="px-8 mx-auto text-start">
+                <div className="px-8 mx-auto text-start pb-4">
                     <h1 className="border-t-2 border-black dark:border-white pt-12 mb-8 mt-4 sm:mt-8 text-4xl font-bold tracking-tight leading-none text-gray-900 dark:text-white">
                         Projects
                     </h1>
@@ -44,7 +23,7 @@ export default function Projects() {
                         {`Here are some of the projects I've worked on:`}
                     </p>
                     <div className="space-y-4">
-                        {placeHolderProjects.map((project, index) => (
+                        {projects.map((project, index) => (
                             <ProjectCard key={index} project={project}/>
                         ))}
                     </div>
@@ -52,4 +31,24 @@ export default function Projects() {
             </section>
         </Layout>
     )
+}
+
+export async function getStaticProps() {
+    try {
+        const response = await fetch('https://qo8zfecxgd.execute-api.us-east-1.amazonaws.com/dev/projects');
+        const data = await response.json();
+
+        return {
+            props: {
+                projects: data,
+            },
+        };
+    } catch (error) {
+        console.error('Error:', error);
+        return {
+            props: {
+                projects: [],
+            },
+        };
+    }
 }
