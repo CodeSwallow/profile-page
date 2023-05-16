@@ -1,9 +1,5 @@
-import contactData from "@/data/contact.json";
+import contactData from "@/data/contacts.json";
 
-export default function handler(req, res) {
-    if (req.method === "GET") {
-        res.status(200).json(contactData.contact);
-    } else {
-        res.status(405).json({ message: "Method Not Allowed" });
-    }
+export function getContacts() {
+    return contactData;
 }
