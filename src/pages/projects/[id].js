@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Layout from "../../components/layout";
 import Link from "next/link";
 
-export default function Project({params}) {
+export default function Project({projectData}) {
     return (
         <Layout>
             <Head>
@@ -14,10 +14,33 @@ export default function Project({params}) {
             <section>
                 <div className="px-8 mx-auto text-start">
                     <h1 className="border-t-2 border-black dark:border-white pt-12 mb-8 mt-4 sm:mt-8 text-4xl font-bold tracking-tight leading-none text-gray-900 dark:text-white">
-                        Projects Placeholder
+                        {projectData.name}
                     </h1>
                 </div>
             </section>
         </Layout>
     )
 }
+
+export async function getServerSideProps(context) {
+    const { id } = context.query;
+
+    try {
+        const response = await fetch(`${process.env.BASE_URL}/projects/${id}`);
+        const projectData = await response.json();
+
+        return {
+            props: {
+                projectData
+            }
+        };
+    } catch (error) {
+        console.error('Error:', error);
+        return {
+            props: {
+                projectData: null
+            }
+        };
+    }
+}
+
