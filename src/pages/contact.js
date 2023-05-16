@@ -1,32 +1,10 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import Layout from "@/components/layout";
 import ContactCard from "@/components/contactCard";
-import EmailIcon from "@/components/emailIcon";
+import { getContacts } from "@/pages/api/contacts";
 
-export default function Contact() {
-    const contact = [
-        {
-            name: "Email",
-            value: "isair15@example.com",
-            icon: <EmailIcon/>
-        },
-        {
-            name: "Email",
-            value: "anothermail@example.com",
-            icon: <EmailIcon/>
-        },
-        {
-            name: "Github",
-            value: "CodeSwallow",
-            icon: <Image
-                src="/github-mark/github-mark-white.svg"
-                alt="Github"
-                width={24}
-                height={24}
-            />
-        }
-    ]
+export default function Contact({contacts}) {
+    console.log(contacts)
 
     return (
         <Layout>
@@ -42,7 +20,7 @@ export default function Contact() {
                         Contact
                     </h1>
                     <div className="flex justify-between space-x-4">
-                        {contact.map((contact, index) => (
+                        {contacts.map((contact, index) => (
                             <ContactCard key={index} contact={contact}/>
                         ))}
                     </div>
@@ -50,4 +28,23 @@ export default function Contact() {
             </section>
         </Layout>
     )
+}
+
+export async function getStaticProps() {
+    try {
+        const contacts = await getContacts();
+
+        return {
+            props: {
+                contacts: contacts.contacts,
+            }
+        };
+    } catch (error) {
+        console.error('Error:', error);
+        return {
+            props: {
+                contacts: [],
+            },
+        };
+    }
 }
