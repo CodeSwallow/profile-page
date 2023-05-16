@@ -3,9 +3,6 @@ import Layout from "@/components/layout";
 import ProjectCard from "@/components/projectCard";
 
 export default function Projects({projects}) {
-    console.log("OMG")
-    console.log(projects)
-
     return (
         <Layout>
             <Head>
@@ -35,7 +32,7 @@ export default function Projects({projects}) {
 
 export async function getStaticProps() {
     try {
-        const response = await fetch('https://qo8zfecxgd.execute-api.us-east-1.amazonaws.com/dev/projects');
+        const response = await fetch(`${process.env.BASE_URL}/projects`);
         const data = await response.json();
 
         return {
