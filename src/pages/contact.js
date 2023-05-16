@@ -1,8 +1,33 @@
 import Head from 'next/head'
-import Layout from "../components/layout";
-import Link from "next/link";
+import Image from 'next/image'
+import Layout from "@/components/layout";
+import ContactCard from "@/components/contactCard";
+import EmailIcon from "@/components/emailIcon";
 
-export default function About() {
+export default function Contact() {
+    const contact = [
+        {
+            name: "Email",
+            value: "isair15@example.com",
+            icon: <EmailIcon/>
+        },
+        {
+            name: "Email",
+            value: "anothermail@example.com",
+            icon: <EmailIcon/>
+        },
+        {
+            name: "Github",
+            value: "CodeSwallow",
+            icon: <Image
+                src="/github-mark/github-mark-white.svg"
+                alt="Github"
+                width={24}
+                height={24}
+            />
+        }
+    ]
+
     return (
         <Layout>
             <Head>
@@ -14,8 +39,13 @@ export default function About() {
             <section>
                 <div className="px-8 mx-auto text-start">
                     <h1 className="border-t-2 border-black dark:border-white pt-12 mb-8 mt-4 sm:mt-8 text-4xl font-bold tracking-tight leading-none text-gray-900 dark:text-white">
-                        About
+                        Contact
                     </h1>
+                    <div className="flex justify-between space-x-4">
+                        {contact.map((contact, index) => (
+                            <ContactCard key={index} contact={contact}/>
+                        ))}
+                    </div>
                 </div>
             </section>
         </Layout>
