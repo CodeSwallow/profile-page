@@ -14,7 +14,6 @@ export default function ProjectCard({project, index}) {
 
         const formattedString = `${month} ${year}`;
         setFormattedDate(formattedString);
-        console.log(date)
     }, []);
 
     const animationClassDelay = {
