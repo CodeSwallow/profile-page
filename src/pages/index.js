@@ -30,10 +30,9 @@ export default function Home() {
                             {bodyText.body}
                         </p>
                     </div>
-                    <Link href={"/projects"} className="text-xl dark:text-white hover:font-semibold">
-                        <span className="underline underline-offset-4">Projects</span>
-                        {` ->`}
-                    </Link>
+                    <div className="transition ease-in-out hover:translate-x-8 hover:scale-110 text-lg dark:text-white">
+                        <Link href={"/projects"}>Projects{` ->`}</Link>
+                    </div>
                 </div>
             </section>
         </Layout>
