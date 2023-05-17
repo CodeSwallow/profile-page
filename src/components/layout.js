@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import Navbar from "./navbar";
 
 export default function Layout({children}) {
-    const [darkMode, setDarkMode] = useState('dark')
+    const [darkMode, setDarkMode] = useState('light')
 
     useEffect(() => {
         const item = localStorage.getItem('theme')
@@ -23,7 +23,7 @@ export default function Layout({children}) {
 
     return (
         <div className={darkMode === "light" ? "light" : "dark"}>
-            <div className="bg-gradient-to-tl from-zinc-100 via-zinc-200 to-pink-100 dark:from-gray-900 dark:from-70% dark:via-gray-900 dark:via-80% dark:to-gray-700 dark:to-90% min-h-screen min-w-screen">
+            <div className="overflow-x-hidden bg-gradient-to-tl from-zinc-100 via-zinc-200 to-pink-100 dark:from-gray-900 dark:from-70% dark:via-gray-900 dark:via-80% dark:to-gray-700 dark:to-90% min-h-screen min-w-screen">
                 <Head>
                     <meta charSet={"utf-8"}/>
                     <meta name="description" content="Isai Ramirez"/>
