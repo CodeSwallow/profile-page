@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function NavbarDropdownButton({toggleDarkMode}) {
     return (
         <div
-            className="visible md:hidden absolute bg-zinc-50 dark:bg-gray-900 mt-1 right-16 z-10 w-44 origin-top-right rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 dark:ring-white focus:outline-none"
+            className="visible md:hidden absolute bg-zinc-50 dark:bg-gray-900 mt-2 right-4 z-10 w-44 origin-top-right rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 dark:ring-white focus:outline-none"
             role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabIndex="-1">
             <div className={`dark:text-white`}>
                 <ul className="px-4 py-4 space-y-2 divide-y divide-gray-900 dark:divide-white">
