@@ -4,8 +4,6 @@ import ContactCard from "@/components/contactCard";
 import { getContacts } from "@/pages/api/contacts";
 
 export default function Contact({contacts}) {
-    console.log(contacts)
-
     return (
         <Layout>
             <Head>
