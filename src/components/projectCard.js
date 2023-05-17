@@ -1,13 +1,27 @@
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import TechnologyCard from "@/components/technologyCard";
 
 
 export default function ProjectCard({project}) {
+    const [formattedDate, setFormattedDate] = useState('');
+
+    useEffect(() => {
+        const date = new Date(project.timeline.startDate);
+
+        const month = date.toLocaleString('default', { month: 'long' });
+        const year = date.getFullYear();
+
+        const formattedString = `${month} ${year}`;
+        setFormattedDate(formattedString);
+        console.log(date)
+    }, []);
+
     return (
         <div className="flex flex-col justify-between p-4 border bg-zinc-50 rounded-lg shadow dark:bg-gray-800">
             <div className="text-black dark:text-white flex justify-between">
                 <span className="text-sm font-light">
-                    {/*{project.dateStarted}*/}
+                    {formattedDate}
                 </span>
                 <div className="flex space-x-1">
                     {project.technologies.map((technology, index) => (
