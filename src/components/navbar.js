@@ -34,13 +34,16 @@ export default function Navbar({toggleDarkMode}) {
                 <Logo className={`h-16 w-16 fill-black dark:fill-white`}/>
                 <div className={`dark:text-white`}>
                     <ul className="pl-2 py-4 space-y-2">
-                        <li>
+                        <li
+                            className={`transition ease-in-out hover:translate-x-1 hover:scale-110`}>
                             <Link href="/">Home</Link>
                         </li>
-                        <li>
+                        <li
+                            className={`transition ease-in-out hover:translate-x-1 hover:scale-110`}>
                             <Link href="/contact">Contact</Link>
                         </li>
-                        <li>
+                        <li
+                            className={`transition ease-in-out hover:translate-x-1 hover:scale-110`}>
                             <Link href="/projects">Projects</Link>
                         </li>
                         <li className="pt-4">
