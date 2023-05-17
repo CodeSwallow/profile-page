@@ -18,7 +18,7 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
             <section>
-                <div className="px-8 mx-auto text-start">
+                <div className="px-8 mx-auto text-start pb-12">
                     <h1 className="border-t-2 border-black dark:border-white pt-12 mb-8 mt-4 sm:mt-8 text-4xl font-bold tracking-tight leading-none text-gray-900 dark:text-white">
                         {bodyText.title}
                     </h1>
