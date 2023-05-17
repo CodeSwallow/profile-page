@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from 'next/router';
 import Layout from "@/components/layout";
+import {getProjectById} from "@/pages/api/projects";
 
 export default function Project({projectData}) {
     const router = useRouter();
@@ -91,8 +92,10 @@ export async function getServerSideProps(context) {
     const {id} = context.query;
 
     try {
-        const response = await fetch(`${process.env.BASE_URL}/projects/${id}`);
-        const projectData = await response.json();
+        // const response = await fetch(`${process.env.BASE_URL}/projects/${id}`);
+        // const projectData = await response.json();
+
+        const projectData = await getProjectById(id);
 
         return {
             props: {

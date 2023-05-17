@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Layout from "@/components/layout";
 import ProjectCard from "@/components/projectCard";
+import {getOrderedProjects} from "@/pages/api/projects";
 
 export default function Projects({projects}) {
     return (
@@ -21,7 +22,7 @@ export default function Projects({projects}) {
                     </p>
                     <div className="space-y-4">
                         {projects.map((project, index) => (
-                            <ProjectCard key={index} project={project}/>
+                            <ProjectCard key={index} project={project} index={index}/>
                         ))}
                     </div>
                 </div>
@@ -32,8 +33,10 @@ export default function Projects({projects}) {
 
 export async function getStaticProps() {
     try {
-        const response = await fetch(`${process.env.BASE_URL}/projects`);
-        const data = await response.json();
+        // const response = await fetch(`${process.env.BASE_URL}/projects`);
+        // const data = await response.json();
+
+        const data = await getOrderedProjects();
 
         return {
             props: {

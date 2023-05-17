@@ -1,11 +1,15 @@
-export default async function handler(req, res) {
-  try {
-    const response = await fetch('https://qo8zfecxgd.execute-api.us-east-1.amazonaws.com/dev/projects');
-    const data = await response.json();
+import projects from '@/data/projects.json';
 
-    res.status(200).json(data);
-  } catch (error) {
-    console.error('Error:', error);
-    res.status(500).json({ error: 'An error occurred' });
-  }
+export function getProjects() {
+    return projects.projects;
+}
+
+export function getProjectById(id) {
+    return projects.projects.find(project => project.sk === id);
+}
+
+export function getOrderedProjects() {
+    return projects.projects.sort((a, b) => {
+        return new Date(b.timeline.startDate) - new Date(a.timeline.startDate);
+    });
 }

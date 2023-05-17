@@ -1,0 +1,173 @@
+{
+  "projects": [
+    {
+      "imageUrl": "https://irs-github-images.s3.amazonaws.com/codeswallo_site/codeswallow-site.png",
+      "github": [
+        "https://github.com/CodeSwallow/django-site"
+      ],
+      "technologies": [
+        "Django",
+        "Bootstrap",
+        "AWS Beanstalk",
+        "AWS RDS",
+        "Amazon S3"
+      ],
+      "sk": "django-blog-site",
+      "extraDescription": "The Django Blog Site project offers a powerful and scalable solution for creating and managing a feature-rich blog site. It incorporates industry-standard technologies and AWS services to ensure a reliable and performant deployment. With its user-friendly interface, responsive design, and comprehensive test coverage, it provides an optimal experience for bloggers and readers alike.",
+      "description": "The Django Blog Site project is a web application that allows users to create and manage blog posts. Built with Django, the popular Python web framework, this project provides a comprehensive solution for creating a dynamic and interactive blog site. It leverages AWS services, including AWS Elastic Beanstalk for deployment, AWS RDS for the database, and Amazon S3 for static media and file storage, ensuring scalability, reliability, and seamless deployment.",
+      "pk": "project",
+      "url": "https://codeswallow.com/",
+      "name": "Django Blog Site",
+      "features": [
+        {
+          "name": "User Authentication and Authorization",
+          "description": "The blog site incorporates user authentication and authorization mechanisms, allowing users to register, log in, and manage their own blog posts. Admin users have additional privileges to moderate and manage the blog site.",
+          "completed": true
+        },
+        {
+          "name": "Blog Post Creation",
+          "description": "Users can create and publish blog posts, including rich text content, images, and tags. The intuitive and user-friendly interface makes it easy to write and format blog articles.",
+          "completed": false
+        },
+        {
+          "name": "Responsive Design with Bootstrap",
+          "description": "The site is styled using Bootstrap v5.3, a popular front-end framework, ensuring a visually appealing and mobile-responsive user interface across different devices and screen sizes.",
+          "completed": true
+        }
+      ],
+      "timeline": {
+        "endDate": "",
+        "startDate": "2022-09-13T00:00:00Z",
+        "completed": false
+      }
+    },
+    {
+      "imageUrl": "https://irs-github-images.s3.amazonaws.com/mockapi/homepage.png",
+      "github": [
+        "https://github.com/CodeSwallow/mockapi-frontend",
+        "https://github.com/CodeSwallow/mockapi-serverless-backend"
+      ],
+      "technologies": [
+        "React",
+        "Tailwind CSS",
+        "AWS Serverless"
+      ],
+      "sk": "mock-api-app",
+      "extraDescription": "The Mock API project provides developers and teams with a convenient way to create and test mock APIs, facilitating the development and integration of client-side applications. It offers a streamlined process for simulating API interactions and validating data flows, thereby aiding in the development and testing phases of software projects.",
+      "description": "The Mock API project is a web application built with React as the frontend and utilizes AWS serverless services, including API Gateway, AWS Lambda, and DynamoDB, as the backend. The primary purpose of this project is to provide users with a platform to simulate and test API interactions by creating and managing projects and their associated models.",
+      "pk": "project",
+      "url": "https://api.codeswallow.com/",
+      "name": "Mock API App",
+      "features": [
+        {
+          "name": "Project Creation",
+          "description": "Users can create projects within the application, defining their specific requirements and objectives.",
+          "completed": true
+        },
+        {
+          "name": "Model Creation",
+          "description": "Within each project, users have the ability to create models that represent different entities or data structures for testing purposes.",
+          "completed": true
+        },
+        {
+          "name": "Automatic Endpoint Generation",
+          "description": "When a user creates a model, the application automatically generates endpoints for the standard CRUD operations (Create, Read, Update, Delete). These endpoints enable users to simulate API requests and responses for their models.",
+          "completed": false
+        },
+        {
+          "name": "API Simulation",
+          "description": "The Mock API project enables users to interact with the created models and their endpoints, allowing them to send requests and receive responses similar to a real API. This functionality aids in testing client-side applications and validating data flows.",
+          "completed": false
+        },
+        {
+          "name": "Data Storage",
+          "description": "The project leverages AWS DynamoDB, a NoSQL database service, to persistently store the project and model data, ensuring scalability and reliability.",
+          "completed": false
+        }
+      ],
+      "timeline": {
+        "endDate": "",
+        "startDate": "2022-11-13T00:00:00",
+        "completed": false
+      }
+    },
+    {
+      "imageUrl": "https://irs-project-images.s3.amazonaws.com/profile-page/Screenshot+2023-05-16+115502.png",
+      "github": [
+        "https://github.com/CodeSwallow/profile-page",
+        "https://github.com/CodeSwallow/profile-backend"
+      ],
+      "technologies": [
+        "Next.js",
+        "Tailwind CSS",
+        "AWS Serverless"
+      ],
+      "sk": "profile-page",
+      "extraDescription": "The Profile Page project offers an elegant and responsive user interface to showcase a user's profile information. By combining Next.js and Tailwind CSS on the frontend and integrating AWS services such as API Gateway, AWS Lambdas, and DynamoDB on the backend, the project ensures efficient data retrieval and a smooth user experience. With dynamic content updates and responsive design, the profile page provides an engaging and visually appealing presentation of a person's profile information.",
+      "description": "The Profile Page project is a dynamic web application that showcases a user's profile information, including project details, contact information, and personal information. The project employs Next.js and Tailwind CSS for the frontend, providing a responsive and visually appealing user interface. The backend utilizes AWS services, including API Gateway, AWS Lambdas, and DynamoDB, to retrieve and serve profile information seamlessly.",
+      "pk": "project",
+      "url": "https://profile.codeswallow.com/",
+      "name": "Profile Page",
+      "features": [
+        {
+          "name": "Profile Information Display",
+          "description": "The project presents a user's profile information, including details such as projects, contact information, and personal information. Users can view a comprehensive overview of the person's background, accomplishments, and expertise.",
+          "completed": true
+        },
+        {
+          "name": "Responsive Design",
+          "description": "The profile page is designed to be responsive, providing an optimal viewing experience across various devices and screen sizes. Tailwind CSS utilities make it easier to create a responsive layout and adapt the UI based on different breakpoints.",
+          "completed": true
+        },
+        {
+          "name": "Dynamic Content",
+          "description": "The profile page fetches the profile information dynamically, allowing for real-time updates and ensuring that the displayed data remains up to date.",
+          "completed": false
+        }
+      ],
+      "timeline": {
+        "endDate": "2023-05-19T00:00:00",
+        "startDate": "2023-05-13T00:00:00",
+        "completed": true
+      }
+    },
+    {
+      "imageUrl": "https://irs-project-images.s3.amazonaws.com/serverless-blog/Screenshot+2023-05-16+115401.png",
+      "github": [
+        "https://github.com/CodeSwallow/serverless-blog-api"
+      ],
+      "technologies": [
+        "Python",
+        "AWS Serverless"
+      ],
+      "sk": "serverless-rest-api-for-blogs",
+      "extraDescription": "The Serverless REST API project offers a highly scalable and efficient solution for managing articles or blogs. By utilizing serverless technologies and AWS services, it ensures high performance, seamless scalability, and reliable storage of article metadata, images, and HTML files. The integration of Step Functions allows for a smooth conversion process from markdown to HTML, enhancing the functionality of the API. With comprehensive testing using Pytest, the project guarantees the correctness and robustness of its functionalities.",
+      "description": "The Serverless REST API project is a scalable and efficient solution for creating, retrieving, modifying, and deleting articles or blogs. This project utilizes various AWS services, including API Gateway, Lambda functions, Step Functions, S3, and DynamoDB, to provide a serverless architecture that ensures high performance, scalability, and reliable storage of article metadata, images, and HTML files.",
+      "pk": "project",
+      "url": "https://irs-test-bucket.s3.amazonaws.com/swagger.html",
+      "name": "Serverless REST API for Blogs",
+      "features": [
+        {
+          "name": "Markdown to HTML Conversion with Step Functions",
+          "description": "For the POST request, Step Functions are employed to handle the conversion and sanitization of the submitted markdown content into HTML format. Additionally, Step Functions facilitate the creation of an HTML file representing the article.",
+          "completed": true
+        },
+        {
+          "name": "Storage with S3",
+          "description": "S3 (Simple Storage Service) is utilized to store images associated with articles as well as the generated HTML files. This allows for efficient retrieval and storage of static assets and article content.",
+          "completed": true
+        },
+        {
+          "name": "Metadata Storage with DynamoDB",
+          "description": "DynamoDB, a NoSQL database service, is leveraged to store the metadata of the articles, including information such as title, author, publish date, and other relevant details. This provides a flexible and scalable storage solution for article metadata.",
+          "completed": true
+        }
+      ],
+      "timeline": {
+        "endDate": "",
+        "startDate": "2023-02-13T00:00:00",
+        "completed": false
+      }
+    }
+  ]
+}
