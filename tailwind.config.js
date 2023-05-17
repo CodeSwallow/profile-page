@@ -11,6 +11,30 @@ module.exports = {
             fontFamily: {
                 "Josefin": ["Josefin Sans", "sans-serif"]
             },
+            keyframes: {
+                'left-to-right': {
+                    '0%': {transform: 'translateX(-100%)'},
+                    '100%': {transform: 'translateX(0)'}
+                },
+                'right-to-left': {
+                    '0%': {transform: 'translateX(100%)'},
+                    '100%': {transform: 'translateX(0)'}
+                },
+                'clear-up': {
+                    '0%': {filter: "blur(5px)"},
+                    '100%': {filter: "blur(0px)"},
+                },
+                'blur': {
+                    '0%': {filter: "blur(0px)"},
+                    '100%': {filter: "blur(5px)"},
+                }
+            },
+            animation: {
+                'left-to-right': 'left-to-right 0.5s ease-in-out',
+                'right-to-left': 'right-to-left 0.5s ease-in-out',
+                'clear-up': 'clear-up 0.5s ease-in-out',
+                'blur': 'blur 0.5s ease-in-out'
+            },
             backgroundColor: {
                 'aws': '#d97706',
                 'react': '#61dafb',
@@ -33,7 +57,7 @@ module.exports = {
                 'vercel': '#000000',
                 'firebase': '#ffca28',
                 'figma': '#f24e1e',
-            }
+            },
         },
     },
     plugins: [],
