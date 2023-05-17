@@ -18,12 +18,12 @@ export default function ProjectCard({project}) {
     }, []);
 
     return (
-        <div className="flex flex-col justify-between p-4 border bg-zinc-50 rounded-lg shadow dark:bg-gray-800">
-            <div className="text-black dark:text-white flex justify-between">
+        <div className="flex flex-col justify-between p-4 bg-zinc-50 rounded-lg transition ease-in-out hover:-translate-y-1 hover:scale-105 shadow hover:shadow-lg dark:bg-gray-800">
+            <div className="text-black dark:text-white flex justify-between mb-2">
                 <span className="text-sm font-light">
                     {formattedDate}
                 </span>
-                <div className="flex space-x-1">
+                <div className="flex">
                     {project.technologies.map((technology, index) => (
                         <TechnologyCard key={index} technology={technology}/>
                     ))}
