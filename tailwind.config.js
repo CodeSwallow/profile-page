@@ -33,6 +33,7 @@ module.exports = {
                 'left-to-right': 'left-to-right 0.5s ease-in-out',
                 'right-to-left': 'right-to-left 0.5s ease-in-out',
                 'clear-up': 'clear-up 0.5s ease-in-out',
+                'clear-up-slow': 'clear-up 1s ease-in-out',
                 'blur': 'blur 0.5s ease-in-out'
             },
             backgroundColor: {

@@ -1,12 +1,42 @@
 import Head from 'next/head';
-import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from 'next/router';
+import { useEffect, useRef, useState } from 'react';
+import { useInView } from 'react-intersection-observer';
 import Layout from "@/components/layout";
 import {getProjectById} from "@/pages/api/projects";
 
 export default function Project({projectData}) {
+    const [isTechnologiesInView, setIsTechnologiesInView] = useState(false);
+    const [isFeaturesInView, setIsFeaturesInView] = useState(false);
     const router = useRouter();
+    const { ref: technologiesRef, inView: technologiesInView } = useInView({
+        triggerOnce: true,
+    });
+    const { ref: featuresRef, inView: featuresInView } = useInView({
+        triggerOnce: true,
+    });
+
+    const animationClassDelay = {
+        0: 'animate-[right-to-left_0.5s_ease]',
+        1: 'animate-[right-to-left_0.7s_ease]',
+        2: 'animate-[right-to-left_0.9s_ease]',
+        3: 'animate-[right-to-left_1.1s_ease]',
+        4: 'animate-[right-to-left_1.3s_ease]',
+        5: 'animate-[right-to-left_1.5s_ease]',
+    }
+
+    useEffect(() => {
+        if (featuresInView) {
+            setIsFeaturesInView(true);
+        }
+    }, [featuresInView]);
+
+    useEffect(() => {
+        if (technologiesInView) {
+            setIsTechnologiesInView(true);
+        }
+    }, [technologiesInView]);
 
     return (
         <Layout>
@@ -32,19 +62,23 @@ export default function Project({projectData}) {
                         <p className="mb-4 font-normal text-gray-500 text-lg dark:text-gray-300">
                             {projectData.description}
                         </p>
-                        <div className="flex justify-evenly">
-                            <Link href={projectData.url}>
-                                <p className="mb-4 font-normal text-gray-500 text-lg dark:text-gray-300">
-                                    Website
-                                </p>
-                            </Link>
-                            <Link href={projectData.github[0]}>
-                                <p className="mb-4 font-normal text-gray-500 text-lg dark:text-gray-300">
-                                    GitHub
-                                </p>
-                            </Link>
+                        <div className="flex justify-evenly text-center mt-8">
+                            <div className="transition ease-in-out hover:-translate-y-1 hover:scale-110 rounded shadow-lg p-2 w-32 bg-purple-100 dark:bg-gray-700">
+                                <a href={projectData.url} target="_blank">
+                                    <p className="font-normal text-gray-500 text-lg dark:text-gray-300">
+                                        Website
+                                    </p>
+                                </a>
+                            </div>
+                            <div className="transition ease-in-out hover:-translate-y-1 hover:scale-110 rounded shadow-lg p-2 w-32 bg-purple-100 dark:bg-gray-700">
+                                <a href={projectData.github[0]} target="_blank">
+                                    <p className="font-normal text-gray-500 text-lg dark:text-gray-300">
+                                        GitHub
+                                    </p>
+                                </a>
+                            </div>
                         </div>
-                        <div className="flex justify-center mt-8">
+                        <div className="animate-clear-up-slow flex justify-center mt-8">
                             <Image
                                 src={projectData.imageUrl}
                                 alt={`Project Image`}
@@ -56,10 +90,10 @@ export default function Project({projectData}) {
                             <h2 className="text-2xl text-gray-900 dark:text-white mb-1">
                                 Features:
                             </h2>
-                            <ul className="list-disc ml-8">
+                            <ul className="list-disc ml-8" ref={featuresRef}>
                                 {projectData.features.map((feature, index) => (
                                     <li key={index}
-                                        className="text-gray-500 text-lg dark:text-gray-300">
+                                        className={`${isFeaturesInView ? animationClassDelay[index] : 'opacity-0'} text-lg dark:text-gray-300 transition ease-in-out hover:translate-x-8 hover:scale-110`}>
                                         {feature.name}
                                     </li>
                                 ))}
@@ -69,10 +103,10 @@ export default function Project({projectData}) {
                             <h2 className="text-2xl text-gray-900 dark:text-white mb-1">
                                 Technologies Used:
                             </h2>
-                            <ul className="list-disc ml-8">
+                            <ul className="list-disc ml-8" ref={technologiesRef}>
                                 {projectData.technologies.map((technology, index) => (
                                     <li key={index}
-                                        className="text-gray-500 text-lg dark:text-gray-300">
+                                        className={`${isTechnologiesInView ? animationClassDelay[index] : 'opacity-0'} text-lg dark:text-gray-300 transition ease-in-out hover:translate-x-8 hover:scale-110`}>
                                         {technology}
                                     </li>
                                 ))}
