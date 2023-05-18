@@ -1,4 +1,4 @@
-export default function TechnologyCard({technology}) {
+export default function TechnologyCard({technology, index}) {
     const technologyColors = {
         'React': 'bg-react',
         'Next.js': 'bg-nextjs',
@@ -30,8 +30,9 @@ export default function TechnologyCard({technology}) {
         'Amazon S3': 'bg-aws'
     }
 
+    console.log(index)
     return (
-        <div className={`text-white text-xs p-1 ml-1 ${technologyColors[technology]} transition ease-in-out hover:-translate-y-1 hover:scale-110 rounded-md shadow-lg`}>
+        <div className={`${index > 2 && 'hidden sm:block'} text-white text-xs p-1 ml-1 ${technologyColors[technology]} transition ease-in-out hover:-translate-y-1 hover:scale-110 rounded-md shadow-lg`}>
             <p>
                 {technology}
             </p>

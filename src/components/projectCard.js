@@ -32,8 +32,8 @@ export default function ProjectCard({project, index}) {
                     {formattedDate}
                 </span>
                 <div className="flex">
-                    {project.technologies.map((technology, index) => (
-                        <TechnologyCard key={index} technology={technology}/>
+                    {project.technologies.slice(0, 5).map((technology, index) => (
+                        <TechnologyCard key={index} technology={technology} index={index}/>
                     ))}
                 </div>
             </div>
