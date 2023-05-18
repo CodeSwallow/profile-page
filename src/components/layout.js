@@ -31,7 +31,7 @@ export default function Layout({children}) {
                     <link rel="icon" href="/favicon.ico"/>
                 </Head>
                 <div className="flex flex-col md:flex-row pt-8 md:pt-32 xl:mx-64 lg:mx-32 md:mx-16 mx-8">
-                    <div className="ml-8 mr-4 sticky top-4">
+                    <div className="ml-8 mr-4">
                         <Navbar toggleDarkMode={toggleDarkMode}/>
                     </div>
                     <div className="mr-4 w-full overflow-x-hidden">

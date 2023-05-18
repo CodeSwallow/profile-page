@@ -11,7 +11,7 @@ export default function Navbar({toggleDarkMode}) {
     }
 
     return (
-        <nav className="py-5 sticky top-4">
+        <nav className="py-5 sticky top-1 md:top-4">
             <div className="md:hidden flex justify-between items-center px-4">
                 <Logo className={`h-12 w-12 fill-black dark:fill-white`}/>
                 <div>
