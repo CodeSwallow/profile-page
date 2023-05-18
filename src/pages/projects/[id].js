@@ -62,15 +62,15 @@ export default function Project({projectData}) {
                         <p className="mb-4 font-normal text-gray-500 text-lg dark:text-gray-300">
                             {projectData.description}
                         </p>
-                        <div className="flex justify-evenly text-center mt-8">
-                            <div className="transition ease-in-out hover:-translate-y-1 hover:scale-110 rounded shadow-lg p-2 w-32 bg-purple-100 dark:bg-gray-700">
+                        <div className="flex justify-center md:justify-evenly text-center mt-8">
+                            <div className="mr-1 transition ease-in-out hover:-translate-y-1 hover:scale-110 rounded shadow-lg p-2 w-32 bg-purple-100 dark:bg-gray-700">
                                 <a href={projectData.url} target="_blank">
                                     <p className="font-normal text-gray-500 text-lg dark:text-gray-300">
                                         Website
                                     </p>
                                 </a>
                             </div>
-                            <div className="transition ease-in-out hover:-translate-y-1 hover:scale-110 rounded shadow-lg p-2 w-32 bg-purple-100 dark:bg-gray-700">
+                            <div className="ml-1 transition ease-in-out hover:-translate-y-1 hover:scale-110 rounded shadow-lg p-2 w-32 bg-purple-100 dark:bg-gray-700">
                                 <a href={projectData.github[0]} target="_blank">
                                     <p className="font-normal text-gray-500 text-lg dark:text-gray-300">
                                         GitHub
@@ -78,7 +78,7 @@ export default function Project({projectData}) {
                                 </a>
                             </div>
                         </div>
-                        <div className="animate-clear-up-slow flex justify-center mt-8">
+                        <div className="animate-clear-up-slow flex justify-center mt-8 transition ease-in-out hover:scale-110">
                             <Image
                                 src={projectData.imageUrl}
                                 alt={`Project Image`}
