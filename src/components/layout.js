@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import Navbar from "./navbar";
 
 export default function Layout({children}) {
-    const [darkMode, setDarkMode] = useState('light')
+    const [darkMode, setDarkMode] = useState('dark')
 
     useEffect(() => {
         const item = localStorage.getItem('theme')
@@ -23,7 +23,7 @@ export default function Layout({children}) {
 
     return (
         <div className={darkMode === "light" ? "light" : "dark"}>
-            <div className="overflow-x-hidden bg-gradient-to-tl from-zinc-100 via-zinc-200 to-pink-100 dark:from-gray-900 dark:from-70% dark:via-gray-900 dark:via-80% dark:to-gray-700 dark:to-90% min-h-screen min-w-screen">
+            <div className="bg-gradient-to-tl from-zinc-100 via-zinc-200 to-pink-100 dark:from-gray-900 dark:from-70% dark:via-gray-900 dark:via-80% dark:to-gray-700 dark:to-90% min-h-screen min-w-screen">
                 <Head>
                     <meta charSet={"utf-8"}/>
                     <meta name="description" content="Isai Ramirez"/>
@@ -31,10 +31,10 @@ export default function Layout({children}) {
                     <link rel="icon" href="/favicon.ico"/>
                 </Head>
                 <div className="flex flex-col md:flex-row pt-8 md:pt-32 xl:mx-64 lg:mx-32 md:mx-16 mx-8">
-                    <div className="ml-8 mr-4">
+                    <div className="ml-8 mr-4 sticky top-4">
                         <Navbar toggleDarkMode={toggleDarkMode}/>
                     </div>
-                    <div className="mr-4 w-full">
+                    <div className="mr-4 w-full overflow-x-hidden">
                         <main>
                             {children}
                         </main>
