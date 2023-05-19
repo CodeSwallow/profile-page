@@ -22,7 +22,7 @@ export default function Home() {
                     <h1 className="border-t-2 border-black dark:border-white pt-12 mb-8 mt-4 sm:mt-8 text-4xl font-bold tracking-tight leading-none text-gray-900 dark:text-white">
                         {bodyText.title}
                     </h1>
-                    <div className="text-justify">
+                    <div className="animate-clear-up text-justify">
                         <p className="mb-4 font-normal text-gray-500 text-lg dark:text-gray-300">
                             {bodyText.underTitle}
                         </p>
@@ -30,8 +30,11 @@ export default function Home() {
                             {bodyText.body}
                         </p>
                     </div>
-                    <div className="transition ease-in-out hover:translate-x-8 hover:scale-110 text-lg dark:text-white">
-                        <Link href={"/projects"}>Projects{` ->`}</Link>
+                    <div className="flex items-center transition ease-in-out hover:translate-x-8 hover:scale-110 text-lg dark:text-white">
+                        <Link href={"/projects"}>Projects</Link>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="ml-2 w-5 h-5">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                        </svg>
                     </div>
                 </div>
             </section>
