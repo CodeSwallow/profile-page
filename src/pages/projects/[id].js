@@ -51,9 +51,11 @@ export default function Project({projectData}) {
                     <button
                         type="button"
                         onClick={() => router.back()}
-                        className="text-gray-500 text-sm dark:text-gray-300 hover:font-semibold"
+                        className="mt-2 md:mt-0 text-gray-500 text-sm dark:text-gray-300 hover:font-semibold"
                     >
-                        Go Back
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                        </svg>
                     </button>
                     <h1 className="border-t-2 border-black dark:border-white pt-12 mb-8 mt-4 sm:mt-8 text-4xl font-bold tracking-tight leading-none text-gray-900 dark:text-white">
                         {projectData.name}
