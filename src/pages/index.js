@@ -6,7 +6,7 @@ export default function Home() {
     let bodyText = {
         "title": "Hello, I'm Isai Ramirez",
         "underTitle": "Recent computer science grad with special interest in web development and cloud technologies (AWS).",
-        "body": "I'm always looking for opportunities to expand my knowledge and skill-set. Whether it's learning a new programming language or exploring the latest advancements in cloud computing, I'm always eager to learn and grow as a developer."
+        "body": "I'm always looking for opportunities to expand my knowledge and skill-set. Whether it's learning a new programming language or exploring the latest advancements in cloud computing, I'm always eager to learn and grow."
     }
 
     return (
