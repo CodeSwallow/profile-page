@@ -5,8 +5,8 @@ import Link from "next/link";
 export default function Home() {
     let bodyText = {
         "title": "Hello, I'm Isai Ramirez",
-        "underTitle": "Recent computer science grad with special interest in web development and cloud technologies (AWS).",
-        "body": "I'm always looking for opportunities to expand my knowledge and skill-set. Whether it's learning a new programming language or exploring the latest advancements in cloud computing, I'm always eager to learn and grow."
+        "underTitle": "Frontend developer with experience using Vue.js, React, Tailwind CSS, and strong responsive design skills. With knowledge of JavaScript, including ECMAScript 6+, as well as the use of libraries and tools such as Axios and Bootstrap.",
+        "body": "I also have experience in backend development using Python, along with implementing AWS cloud services and databases such as Postgresql and DynamoDB."
     }
 
     return (
